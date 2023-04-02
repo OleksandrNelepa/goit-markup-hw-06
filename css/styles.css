@@ -9,7 +9,7 @@
   --cloud-light-color: #f4f4fd;
   --navyblue-modal-color: rgba(46, 47, 66, 0.4);
   --grey-hero-color: rgba(46, 47, 66, 0.7);
-  --main-color: #fff;
+  --main-color: #ffffff;
   --font-weight-caption: 700;
   --font-size-caption: 36px;
   --font-weight-title: 500;
@@ -17,6 +17,7 @@
   --hero-bg: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   --animation-delay: 250ms;
   --animation-func: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-rgba: rgba(77, 90, 229, 1)
 }
 
 /* --- Common styles --- */
@@ -143,10 +144,10 @@ h6 {
 }
 
 .header {
-  background: #ffffff;
+  background: var(--main-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-  border-bottom: 1px solid #e7e9fc;
+  border-bottom: 1px solid var(--cornflower-accent-color);
 }
 
 .nav-container {
@@ -387,7 +388,7 @@ h6 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #4d5ae5;
+  background: var(--iris-brand-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -398,7 +399,7 @@ h6 {
 
 .team-soc-link:hover,
 .team-soc-link:focus {
-  background: #404bbf;
+  background: var(--ocean-pressed-color);
 }
 
 /* ---------Customers----------- */
@@ -415,13 +416,13 @@ h6 {
 }
 
 .link-customers {
-  color: #8e8f99;
+  color: var(--lightslate-subtle-color);
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #8e8f99;
+  border: 1px solid var(--lightslate-subtle-color);
   border-radius: 4px;
   transition-property: border-color, color;
   transition-duration: 250ms;
@@ -429,8 +430,8 @@ h6 {
 }
 
 .link-customers:is(:hover, :focus) {
-  border-color: #404bbf;
-  color: #404bbf;
+  border-color: var(--ocean-pressed-color);
+  color: var(--ocean-pressed-color);
 }
 
 .icon {
@@ -501,7 +502,7 @@ h6 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #4d5ae5;
+  background: var(--iris-brand-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -511,7 +512,7 @@ h6 {
 }
 
 .footer-soc-link:is(:hover, :focus) {
-  background: #31d0aa;
+  background: var(--green-success-color);
 }
 
 /* --- Portfolio page --- */
@@ -668,10 +669,10 @@ h6 {
 }
 
 .label-name {
-  display: inline-block;
+  display: block;
   font-size: 12px;
-  margin-bottom: 5px;
-  color: #8E8F99;
+  margin-bottom: 4px;
+  color: var(--lightslate-subtle-color);
 }
 
 .input-div {
@@ -694,7 +695,7 @@ h6 {
 }
 
 .modal-input:focus {
-  border-color: rgba(77, 90, 229, 1);
+  border-color: var(--color-rgba);
 }
 
 .modal-input-icon {
@@ -703,10 +704,11 @@ h6 {
   top: 50%;
   transform: translateY(-50%);
   fill: #2E2F42;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus + .modal-input-icon {
-  fill: rgba(77, 90, 229, 1);
+  fill: var(--color-rgba);
 }
 
 .textarea {
@@ -724,10 +726,14 @@ h6 {
 }
 
 .textarea:focus {
-  border-color: rgba(77, 90, 229, 1);
+  border-color: var(--color-rgba);
 }
 
 .modal-textarea {
+  margin-bottom: 8px;
+}
+
+.modal-filed {
   margin-bottom: 8px;
 }
 
@@ -799,6 +805,7 @@ h6 {
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .send-btn:hover,
@@ -808,7 +815,7 @@ h6 {
 }
 
 .footer-subscribe {
-  margin-left: 80px;
+  margin-left: auto
 }
 
 .footer-header {
@@ -816,7 +823,7 @@ h6 {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #FFFFFF;
+  color: var(--main-color);
   margin-bottom: 16px;
 }
 
@@ -835,7 +842,7 @@ h6 {
   font-size: 12px;
   line-height: 0.2;
   letter-spacing: 0.04em;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--main-color);
   color: var(--main-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -859,12 +866,13 @@ h6 {
   transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .footer-plane-icon {
-  fill: #ffffff;
+  fill: var(--main-color);
 }
 
 .subscribe-btn:is(:hover, :focus) {
-  background: #404BBF;
+  background: var(--ocean-pressed-color);
 }
